@@ -15,8 +15,7 @@ const SearchBar = ({ setImages }) => {
         `https://api.pexels.com/v1/search?query=${query}&per_page=8`,
         {
           headers: {
-            Authorization:
-              "4wmXgEDq1wwZzBsVSrZEMhGK0tjnbrwdgPYdmZn3VrdTgJmnXB6gWLWQ",
+            Authorization: `Bearer ${process.env.REACT_APP_PEXELS_API_KEY}`,
           },
         }
       );
